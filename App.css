@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+}
+
+.navbar {
+  min-height: 76px;
+  background: #172554;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 0 50px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  color: white;
+  text-decoration: none;
+  font-size: 23px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.menu > a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 13px;
+  border-radius: 6px;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.menu > a:hover,
+.dropdown button:hover {
+  background: #263b80;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 15px;
+  padding: 12px 13px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 215px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+  z-index: 100;
+  border: 1px solid #e5e7eb;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 13px 16px;
+  color: #222;
+  background: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+  background: #eef2ff;
+  color: #172554;
+}
+
+.hero {
+  min-height: calc(100vh - 76px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+}
+
+.hero-card,
+.content {
+  width: min(900px, 92%);
+  background: white;
+  border-radius: 16px;
+  padding: 70px 50px;
+  text-align: center;
+  box-shadow: 0 10px 35px rgba(15, 23, 42, 0.09);
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  color: #4f46e5;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero h1,
+.content h1 {
+  margin: 0 0 18px;
+  color: #172554;
+  font-size: 38px;
+}
+
+.hero p:not(.eyebrow),
+.content p {
+  margin: 0;
+  color: #555;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.content {
+  margin: 90px auto;
+}
+
+@media (max-width: 1000px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 18px 25px;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+  }
+}
