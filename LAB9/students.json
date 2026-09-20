@@ -1,6 +1,6 @@
 [
-  { "id": 101, "name": "Aditi Sharma", "department": "Computer Science", "year": 2, "cgpa": 8.7 },
-  { "id": 102, "name": "Rohan Mehta", "department": "Electronics", "year": 3, "cgpa": 7.9 },
-  { "id": 103, "name": "Priya Nair", "department": "Information Technology", "year": 1, "cgpa": 9.1 },
-  { "id": 104, "name": "Karan Verma", "department": "Mechanical", "year": 4, "cgpa": 8.2 }
+  { "id": 101, "name": "Srinivas", "department": "Computer Science", "year": 2, "cgpa": 8.7 },
+  { "id": 102, "name": "Raghav", "department": "Electronics", "year": 3, "cgpa": 7.9 },
+  { "id": 103, "name": "Siddhi", "department": "Information Technology", "year": 1, "cgpa": 9.1 },
+  { "id": 104, "name": "Cherian", "department": "Mechanical", "year": 4, "cgpa": 8.2 }
 ]
