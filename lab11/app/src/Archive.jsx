@@ -1,0 +1,3 @@
+import {useEffect,useState} from "react"; import PostSummary from "../components/PostSummary";
+const API="http://localhost:5000/api/posts";
+export default function Archive(){const [posts,setPosts]=useState([]),[loading,setLoading]=useState(true);useEffect(()=>{fetch(API).then(r=>r.json()).then(d=>{setPosts(d);setLoading(false)}).catch(()=>setLoading(false))},[]);if(loading)return <div className="page"><p>Loading archive...</p></div>;return <div className="page"><div className="page-header"><h1>Post Archive</h1><p>All your blog posts.</p></div>{!posts.length?<div className="empty"><h2>No posts found</h2></div>:<div className="posts-grid">{posts.map(p=><PostSummary key={p._id} post={p}/>)}</div>}</div>}
