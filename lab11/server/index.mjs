@@ -1,0 +1,13 @@
+import "./loadEnvironment.mjs";
+import express from "express";
+import cors from "cors";
+import { connectDB } from "./db/conn.mjs";
+import postsRouter from "./routes/posts.mjs";
+const app=express();
+app.use(cors());
+app.use(express.json());
+app.use("/api/posts",postsRouter);
+app.get("/",(req,res)=>res.json({message:"Blog Management REST API is running"}));
+app.use((req,res)=>res.status(404).json({error:"Route not found"}));
+const PORT=process.env.PORT||5000;
+connectDB().then(()=>app.listen(PORT,()=>console.log(`Server running at http://localhost:${PORT}`))).catch(console.error);
